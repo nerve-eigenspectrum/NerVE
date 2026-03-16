@@ -1,0 +1,8 @@
+defaults:
+  - model: default
+  - train: train
+
+gpu: 0
+seed: 1337
+num_token_mult: 6
+use_wandb: false

@@ -1,0 +1,52 @@
+# Model Architecture Configuration
+name: gpt2
+context_length: 128
+n_embd: 768
+n_layer: 12
+n_head: 12
+
+# Normalization Configuration
+norm_type: ln  # Options:
+               #   - "ln": LayerNorm (baseline)
+               #   - "rmsnorm": RMSNorm (Appendix K)
+               #   - "free": Normalization-free architecture (Section 3.2)
+
+norm_position: pre  # Options:
+                    #   - "pre": Pre-LN (baseline, Section 3.4)
+                    #   - "post": Post-LN (Section 3.4)
+                    #   - "mixed": MixLN — PostLN for first N layers, PreLN for rest (Section 3.4)
+                    #   - "free": No normalization (Section 3.2)
+
+post_ln_layers: 3   # Number of PostLN layers when norm_position="mixed"
+
+# FFN Weight Geometry (Section 3.3)
+ffn_norm_type: none  # Options:
+                     #   - "none": Vanilla FFN (baseline)
+                     #   - "weight": Weight normalization (Salimans & Kingma, 2016)
+                     #   - "spectral": Spectral normalization (Miyato et al., 2018)
+                     #   - "hyperspherical": Hyperspherical normalization (Liu et al., 2017)
+                     #   - "ngpt": nGPT-style with learnable scaling (Loshchilov et al., 2025)
+
+# Parameter Initialization
+initializer_range: 0.02
+
+# MLP Configuration
+mlp_width_mult: 4  # Multiplier for FFN hidden dimension (D = mlp_width_mult * n_embd)
+                   # Section 3.4 sweeps: 1, 2, 3, 4, 5, 6, 7, 8
+
+# Activation Function Configuration (Section 3.1)
+activation_function: gelu  # Options:
+                           #   - "gelu": GELU (baseline)
+                           #   - "relu": ReLU
+                           #   - "leaky_relu": Leaky ReLU with fixed slope
+                           #   - "learnable_lrelu": Leaky ReLU with learnable slope (Section 3.2)
+                           #   - "swiglu": SwiGLU gated activation (LLaMA-style)
+                           #   - "geglu": GeGLU gated activation (Gemma-style)
+
+# Leaky ReLU Configuration (only used when activation_function = "leaky_relu" or "learnable_lrelu")
+lrelu_neg_slope: 1e-2
+
+# Learnable Leaky ReLU Configuration (only used when activation_function = "learnable_lrelu")
+learnable_lrelu_mode: per_layer  # Options:
+                                 #   - "global": Single slope shared across all layers
+                                 #   - "per_layer": Separate slope per layer
