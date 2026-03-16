@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nerve-spectral"
+version = "0.1.0"
+description = "NerVE: Nonlinear Eigenspectrum Dynamics in LLM Feed-Forward Networks"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Nandan Kumar Jha", email = "nj2049@nyu.edu"},
+    {name = "Brandon Reagen", email = "bjr5@nyu.edu"},
+]
+keywords = [
+    "eigenspectrum",
+    "feed-forward networks",
+    "large language models",
+    "interpretability",
+    "spectral analysis",
+    "transformers",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=1.12",
+]
+
+[project.optional-dependencies]
+# For using the analyzer with HuggingFace models and training callback
+full = [
+    "transformers>=4.20",
+]
+# For reproducing paper experiments
+experiments = [
+    "transformers>=4.20",
+    "datasets",
+    "hydra-core",
+    "wandb",
+]
+
+[project.urls]
+Homepage = "https://nerve-eigenspectrum.github.io/"
+Repository = "https://github.com/nerve-eigenspectrum/NerVE"
+Paper = "https://arxiv.org/abs/XXXX.XXXXX"
+
+[tool.setuptools.packages.find]
+include = ["nerve*"]

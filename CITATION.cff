@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use NerVE in your research, please cite it as below."
+title: "NerVE: Nonlinear Eigenspectrum Dynamics in LLM Feed-Forward Networks"
+authors:
+  - family-names: "Jha"
+    given-names: "Nandan Kumar"
+    affiliation: "New York University"
+  - family-names: "Reagen"
+    given-names: "Brandon"
+    affiliation: "New York University"
+type: conference-paper
+conference:
+  name: "International Conference on Learning Representations (ICLR)"
+year: 2026
+url: "https://nerve-eigenspectrum.github.io/"
+repository-code: "https://github.com/nerve-eigenspectrum/NerVE"
+license: MIT
