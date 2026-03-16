@@ -2,12 +2,13 @@
 
 <p align="center">
   <a href="https://nerve-eigenspectrum.github.io/"><b>Project Page</b></a> &nbsp;|&nbsp;
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><b>Paper</b></a> &nbsp;|&nbsp;
+  <a href="https://arxiv.org/abs/2603.06922"><b>Paper</b></a> &nbsp;|&nbsp;
   <a href="https://colab.research.google.com/"><b>Demo Notebook</b></a>
 </p>
 
+
 <p align="center">
-  <em>Published as a conference paper at ICLR 2026</em>
+  <em>To appear at ICLR 2026</em>
 </p>
 
 **NerVE** is a unified eigenspectral framework for understanding how feed-forward networks (FFNs) in large language models organize and regulate information flow in high-dimensional latent space. Despite FFNs dominating the parameter budget, their high-dimensional dynamics remain poorly understood. NerVE addresses this gap through lightweight, memory-efficient tracking of eigenspectrum dynamics via four complementary metrics.
@@ -174,13 +175,11 @@ python scripts/run_clm.py model.mlp_width_mult=8   # D = 8d
 If you find NerVE useful in your research, please cite:
 
 ```bibtex
-@inproceedings{
-    jha2026nerve,
+@inproceedings{jha2026nerve,
     title={NerVE: Nonlinear Eigenspectrum Dynamics in {LLM} Feed-Forward Networks},
     author={Nandan Kumar Jha and Brandon Reagen},
-    booktitle={The Fourteenth International Conference on Learning Representations},
-    year={2026},
-    url={https://openreview.net/forum?id=XXXXXXXXXX}
+    booktitle={The Fourteenth International Conference on Learning Representations (ICLR)},
+    year={2026},    
 }
 ```
 
