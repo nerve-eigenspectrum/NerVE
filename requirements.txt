@@ -1,0 +1,5 @@
+torch>=1.12
+transformers>=4.20
+datasets
+hydra-core
+wandb

@@ -41,10 +41,13 @@ pip install -e .
 ```
 
 ### Requirements
+```bash
+pip install -r requirements.txt
+```
 
 - Python >= 3.8
 - PyTorch >= 1.12
-- Transformers >= 4.20 (for training-time monitoring and analyzer)
+- Transformers >= 4.20 (for analyzer and training callback)
 
 ## Quick Start
 
