@@ -100,7 +100,7 @@ def launch(cfg):
         n_embd=cfg.model.n_embd,
         n_inner=int(cfg.model.n_embd * cfg.model.mlp_width_mult),
         initializer_range=cfg.model.initializer_range,
-        output_attentions=cfg.report_attn_entropy,
+        # output_attentions=cfg.report_attn_entropy,
     )
     model = GPT2LMHeadModel(model_config)
 
@@ -145,10 +145,7 @@ def launch(cfg):
         max_grad_norm=cfg.train.max_grad_norm,
     )
 
-    args.report_attn_entropy = cfg.report_attn_entropy
-    args.report_nan_counts = cfg.report_nan_counts
-    args.report_neg_slope = cfg.report_neg_slope
-
+   
     trainer = MyTrainer(
         model=model,
         tokenizer=tokenizer,
