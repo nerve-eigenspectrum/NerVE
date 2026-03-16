@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://nerve-eigenspectrum.github.io/"><b>Project Page</b></a> &nbsp;|&nbsp;
   <a href="https://arxiv.org/abs/2603.06922"><b>Paper</b></a> &nbsp;|&nbsp;
-  <a href="https://colab.research.google.com/"><b>Demo Notebook</b></a>
+  <a href="https://colab.research.google.com/github/nerve-eigenspectrum/NerVE/blob/main/notebooks/demo_pretrained.ipynb"><b>Demo Notebook</b></a>
 </p>
 
 
