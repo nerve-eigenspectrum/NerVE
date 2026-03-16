@@ -192,4 +192,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Acknowledgments
 
-This work was conducted at New York University. We thank the reviewers for their constructive feedback.
+Our GPT-2 implementation builds on the [Simplified Transformers](https://github.com/bobby-he/simplified_transformers) codebase.
