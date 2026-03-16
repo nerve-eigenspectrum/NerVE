@@ -53,7 +53,7 @@ experiments = [
 [project.urls]
 Homepage = "https://nerve-eigenspectrum.github.io/"
 Repository = "https://github.com/nerve-eigenspectrum/NerVE"
-Paper = "https://arxiv.org/abs/XXXX.XXXXX"
+Paper = "https://arxiv.org/abs/2603.06922"
 
 [tool.setuptools.packages.find]
 include = ["nerve*"]
